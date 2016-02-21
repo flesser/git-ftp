@@ -712,7 +712,7 @@ test_pull() {
 	rtrn=$?
 	assertEquals 0 $rtrn
 	assertTrue ' external file not downloaded' "[ -r 'external.txt' ]"
-	assertTrue ' external file not listed in commit message' "git log -1 | grep 'external.txt'"
+	assertTrue ' external file not listed in commit message' "git log | grep 'external.txt'"
 }
 
 test_pull_nothing() {
